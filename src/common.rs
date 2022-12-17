@@ -27,6 +27,8 @@ pub struct Camera {
 pub struct Stream {
 	pub source_url: Url,
 	pub recast_url: Option<Url>,
+	pub width: u32,
+	pub height: u32,
 }
 
 /// Slimmed-down version of Camera with only basic info
