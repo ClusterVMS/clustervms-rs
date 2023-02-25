@@ -29,6 +29,9 @@ pub struct Stream {
 	pub recast_url: Option<Url>,
 	pub width: u32,
 	pub height: u32,
+
+	#[serde(default)]
+	pub labels: HashMap<String, String>,
 }
 
 /// Slimmed-down version of Camera with only basic info
