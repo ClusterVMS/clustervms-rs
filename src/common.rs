@@ -18,6 +18,9 @@ pub struct Camera {
 	pub name: String,
 	pub username: Option<String>,
 	pub password: Option<String>,
+	// URL for ONVIF control
+	pub onvif_url: Option<Url>,
+	#[serde(default)]
 	pub streams: HashMap<StreamId, Stream>,
 }
 
@@ -27,8 +30,8 @@ pub struct Camera {
 pub struct Stream {
 	pub source_url: Url,
 	pub recast_url: Option<Url>,
-	pub width: u32,
-	pub height: u32,
+	pub width: Option<u32>,
+	pub height: Option<u32>,
 
 	#[serde(default)]
 	pub labels: HashMap<String, String>,
